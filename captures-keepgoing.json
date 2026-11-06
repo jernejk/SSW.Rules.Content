@@ -1,0 +1,110 @@
+﻿[
+    {
+        "pr":  13682,
+        "uri":  "self-contained-static-html-dashboards",
+        "title":  "Do you keep small dashboards in a self-contained HTML file?",
+        "image":  "2026-11-07-keepgoing/self-contained-static-html-dashboards.png",
+        "sha256":  "cd845ac0bc6e496d0e60de87ab2da244795325621fe462a48bd511c308b8ba8a",
+        "bytes":  753134,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13659,
+        "uri":  "thin-signed-webhooks",
+        "title":  "Do you send thin, signed webhooks?",
+        "image":  "2026-11-07-keepgoing/thin-signed-webhooks.png",
+        "sha256":  "e8239ffec27c5a4ab1e53c44fb31ad6e47ba769d3e5227dd43f34e30a3398c51",
+        "bytes":  456787,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13660,
+        "uri":  "code-commenting",
+        "title":  "Do you follow code commenting standards?",
+        "image":  "2026-11-07-keepgoing/code-commenting.png",
+        "sha256":  "d2e1849a24f73f2cff064c02242f9ffbff80e7a82ff71d6433be204963a93322",
+        "bytes":  547572,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13663,
+        "uri":  "assert-the-target-environment-before-risky-operations",
+        "title":  "Do you verify the target environment before risky operations?",
+        "image":  "2026-11-07-keepgoing/assert-the-target-environment-before-risky-operations.png",
+        "sha256":  "800d55498557fbf244f89ca3bb31240a39af574c4848512cc8ada25fb61d163a",
+        "bytes":  554763,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13590,
+        "uri":  "ai-dashboards-with-insights",
+        "title":  "Do you use AI to generate useful dashboards with insights?",
+        "image":  "2026-11-07-keepgoing/ai-dashboards-with-insights.png",
+        "sha256":  "0efd47944061bde7a8f9ef355ec012a765ba98730a7338f61547da8e2deff12d",
+        "bytes":  746399,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13590,
+        "uri":  "check-dashboard-totals-against-the-source",
+        "title":  "Do you check your dashboard totals against the source?",
+        "image":  "2026-11-07-keepgoing/check-dashboard-totals-against-the-source.png",
+        "sha256":  "c77862989ea215a63944029037643fa281e79c697b9752b9869cbe845939f3cd",
+        "bytes":  624315,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13590,
+        "uri":  "disagreement-inbox-for-ai-quality",
+        "title":  "Do you turn AI quality disagreements into a review inbox?",
+        "image":  "2026-11-07-keepgoing/disagreement-inbox-for-ai-quality.png",
+        "sha256":  "4b06150c70ac6c69762d9506ec962e80dc2fe5a92a01e01bd571a8ef00c0b541",
+        "bytes":  1380034,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13590,
+        "uri":  "show-missing-and-stale-data-on-dashboards",
+        "title":  "Do your dashboards say when data is missing or stale?",
+        "image":  "2026-11-07-keepgoing/show-missing-and-stale-data-on-dashboards.png",
+        "sha256":  "0f32e9621703900338ebc9f4503a83b8bf6cdf9a92757755cb3e05947b62d156",
+        "bytes":  710300,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13655,
+        "uri":  "agent-safe-write-operations",
+        "title":  "Do you prevent duplicate writes when AI agents retry?",
+        "image":  "2026-11-07-keepgoing/agent-safe-write-operations.png",
+        "sha256":  "e806c853ead62bb3d9aba28f7281dabe1c5fbbcadc6474f0123a23fb04fb59c6",
+        "bytes":  823776,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13662,
+        "uri":  "feed-data-to-ai",
+        "title":  "Do you know the best way to feed your data to AI?",
+        "image":  "2026-11-07-keepgoing/feed-data-to-ai.png",
+        "sha256":  "507683067c16b1ad24beb09c89a737dda5f9e632fb50af2dc2be17d6ec37a7d8",
+        "bytes":  1278470,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13662,
+        "uri":  "let-prompts-learn-from-feedback",
+        "title":  "Do you let your prompts learn from feedback?",
+        "image":  "2026-11-07-keepgoing/let-prompts-learn-from-feedback.png",
+        "sha256":  "11c4e0acfa72853413738ca1c9f5d429fa44fdb8a1995252fdbc8e33f6c6fcc7",
+        "bytes":  659241,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    },
+    {
+        "pr":  13677,
+        "uri":  "record-ai-run-provenance",
+        "title":  "Do you record provenance for AI outputs you keep?",
+        "image":  "2026-11-07-keepgoing/record-ai-run-provenance.png",
+        "sha256":  "4ee67d9005a44faf101f90e99a3b705ca3952c360d058acdb00d6fe6f69d7998",
+        "bytes":  677528,
+        "previewHead":  "51d0890312eb333ac68bca29a832f56a03055147"
+    }
+]
