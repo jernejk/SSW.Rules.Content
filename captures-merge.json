@@ -1,0 +1,132 @@
+﻿[
+    {
+        "pr":  13685,
+        "uri":  "automatic-code-reviews-github",
+        "title":  "Do you automate code reviews on GitHub?",
+        "head":  "378314512b4cb5d4832491537d861a7afe162d0e",
+        "blob":  "35aa09d547dacbd06a27dc904f4ebf2926dbb70d",
+        "image":  "2026-11-06-merge/automatic-code-reviews-github.png",
+        "sha256":  "a3fd7fe472bb679a82526d63ca956a4798ccfdb56a59f57f78c0ef116fef8155",
+        "bytes":  1213980
+    },
+    {
+        "pr":  13686,
+        "uri":  "make-rd-experiment-outcomes-measurable",
+        "title":  "Do you make your R\u0026D experiment outcomes measurable?",
+        "head":  "73d6c4827b5c1d53c1b5f5a4254246ee39aacecc",
+        "blob":  "83b68ecdc7b7233bef53da16f9fcba67cc4eedc2",
+        "image":  "2026-11-06-merge/make-rd-experiment-outcomes-measurable.png",
+        "sha256":  "4658595a105a9f706ccb86c2498f48348f46b62eb29e5f103491f6123e3c9078",
+        "bytes":  401132
+    },
+    {
+        "pr":  13687,
+        "uri":  "protect-your-main-branch",
+        "title":  "Do you protect your main branch?",
+        "head":  "b5d721eb6c55d501ed8428522cf8121a3bb96f23",
+        "blob":  "3150c6b35c04b6258e0fbee71073e2e0f83a6a99",
+        "image":  "2026-11-06-merge/protect-your-main-branch.png",
+        "sha256":  "132b9f475b28157ee5b86dd48c2ce0d02ee37317c6579c666af1214faa2e8993",
+        "bytes":  993607
+    },
+    {
+        "pr":  13688,
+        "uri":  "use-and-indicate-draft-pull-requests",
+        "title":  "Do you use and indicate Draft Pull Requests?",
+        "head":  "d0df23fe53b0d0567e89ee75419c2e22b3bd13f3",
+        "blob":  "9d48a3a51cf700796ddf99616d0b20999a476dc7",
+        "image":  "2026-11-06-merge/use-and-indicate-draft-pull-requests.png",
+        "sha256":  "2109ce1a99a525ab9f84e1f59ae2043e99195d5a08ad645708031758a5b0bd89",
+        "bytes":  551378
+    },
+    {
+        "pr":  13689,
+        "uri":  "read-source-code",
+        "title":  "Do you know how to read source code?",
+        "head":  "a694d08a342268cbfa39f942db72c1561e244351",
+        "blob":  "4534c4b8629a55c01bcce165d7ad2240ac5b5467",
+        "image":  "2026-11-06-merge/read-source-code.png",
+        "sha256":  "7592c25a1c721207ce45dc30566b9f1f33988af62bdd511e26c4523afa58e281",
+        "bytes":  549980
+    },
+    {
+        "pr":  13690,
+        "uri":  "design-for-agent-experience",
+        "title":  "Do you design your app for agent experience (AX)?",
+        "head":  "4357ee64c1aee87f0fb08adac8d601f34ae6b158",
+        "blob":  "3cea5c099782cf38b826ebebdf798b4a374dda16",
+        "image":  "2026-11-06-merge/design-for-agent-experience.png",
+        "sha256":  "4cc6a414ac3746a0de9a0631c18577752f99d956ede711cef8858ff99a395c67",
+        "bytes":  670173
+    },
+    {
+        "pr":  13691,
+        "uri":  "monitor-ai-cost-and-usage",
+        "title":  "Do you monitor AI cost and usage?",
+        "head":  "ba29b6a409bf237afffb9e7b8234f536c4c42e60",
+        "blob":  "c870078922e74e9bf711329c1310f50ac7ec40b8",
+        "image":  "2026-11-06-merge/monitor-ai-cost-and-usage.png",
+        "sha256":  "b783c35732d209b7f135331c36ed7e8ec1553b0ed94504ba9be55b0dd95c0506",
+        "bytes":  600256
+    },
+    {
+        "pr":  13692,
+        "uri":  "mcp-server",
+        "title":  "Do you have an MCP server to let AI agents plug into your app?",
+        "head":  "8e689a5393cecac43e4f6f4759057d4304f77a48",
+        "blob":  "7f1a387dea29513af45efaacbe94ff5623a6f17c",
+        "image":  "2026-11-06-merge/mcp-server.png",
+        "sha256":  "730aae69f634171bc3ced30ec4e58a595c8b78afa98f9428530f4356602d0755",
+        "bytes":  702009
+    },
+    {
+        "pr":  13693,
+        "uri":  "use-gated-deployments",
+        "title":  "GitHub Environments - Do you use gated deployments?",
+        "head":  "f63f425b68fc9133dfd390d3b5c4b25551280c2b",
+        "blob":  "4d71f29aceb951fde0692219c8fe33078a341e80",
+        "image":  "2026-11-06-merge/use-gated-deployments.png",
+        "sha256":  "995a8bd56d136a34d4e7dcca48ed019579717a3f5c083169f804a8c932bebc5a",
+        "bytes":  686433
+    },
+    {
+        "pr":  13694,
+        "uri":  "aspire",
+        "title":  "Do you use .NET Aspire to simplify cloud-native development?",
+        "head":  "38cd54ade5c2f65a0ffbee560cd038646c2f21ef",
+        "blob":  "8d9e2c63f5f1520150dd3371aaf118c047ae2579",
+        "image":  "2026-11-06-merge/aspire.png",
+        "sha256":  "33506fa4f77226d7ed3cf55092773e9db06bc426a8fa87c7540d82fd0d6c11b6",
+        "bytes":  310050
+    },
+    {
+        "pr":  13695,
+        "uri":  "review-ai-plans",
+        "title":  "Do you review your AI coding plans?",
+        "head":  "d4ef820a1922750385361b5549c503057318ae29",
+        "blob":  "64b57f831cf1508003f8f94237f1eb0243b351fb",
+        "image":  "2026-11-06-merge/review-ai-plans.png",
+        "sha256":  "2782af97f0bddbe2b24372da36d4b9981a9f68e8aca1b63f4970909e3680aa8b",
+        "bytes":  1325039
+    },
+    {
+        "pr":  13696,
+        "uri":  "agentic-workflows",
+        "title":  "Do you use Agentic Workflows?",
+        "head":  "3b416ec608c817f93a072e0e220c7a6ab3d435cb",
+        "blob":  "67dfc06d87ba84b9e04229a2a61ff546177dc669",
+        "image":  "2026-11-06-merge/agentic-workflows.png",
+        "sha256":  "f80bda0a4db68e2f3cb3ba063963668dfce6d46b238029bef7f2104e9e28dff2",
+        "bytes":  461445
+    },
+    {
+        "pr":  13697,
+        "uri":  "critical-agent",
+        "title":  "Do you introduce a critical agent?",
+        "head":  "6f4e2e2c09dda1807808bedd37aa2b29e45c57e7",
+        "blob":  "c5c30ba67b5064952f441ab94456c804d0df382b",
+        "image":  "2026-11-06-merge/critical-agent.png",
+        "sha256":  "661737079b1701b7ad60d35469a1994e3bb0e903ea64c74d83307231de93996b",
+        "bytes":  262967
+    }
+]
