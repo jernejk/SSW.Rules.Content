@@ -1,0 +1,308 @@
+[
+  {
+    "pr": 13668,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13668",
+    "uri": "human-only-release-steps",
+    "title": "Do you enforce human-only release steps for AI agents?",
+    "sourceHead": "6480ed59e42d2e04bcc6f2bc2254b52f26cdf317",
+    "ruleBlob": "f35f0a9be6a88772b23508a19ebdfa71bd7860d9",
+    "assets": [
+      {
+        "blob": "9bb73b058ef5200bf3f93d4dc21ef0f6120d5a8f",
+        "path": "public/uploads/rules/human-only-release-steps/release-checklist-human-only.png"
+      },
+      {
+        "blob": "eaa3812c424f8972f350d4fc9c41228ebc36fe0d",
+        "path": "public/uploads/rules/human-only-release-steps/release-checklist-unrestricted.png"
+      },
+      {
+        "blob": "f35f0a9be6a88772b23508a19ebdfa71bd7860d9",
+        "path": "public/uploads/rules/human-only-release-steps/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/human-only-release-steps.png",
+    "width": 1280,
+    "height": 5290,
+    "sha256": "b316d1577d43cff28e997d68b2a0a564f1623fd332070b35428681e4e9ed980a",
+    "capturedAt": "2026-11-06T04:22:55.287Z"
+  },
+  {
+    "pr": 13669,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13669",
+    "uri": "cli-first-mcp-shared-services",
+    "title": "Do you build your MCP server on a tested CLI or shared library?",
+    "sourceHead": "db3cef2b68a185326cf300885bb003f55e4e8027",
+    "ruleBlob": "18ad4167f15e17cb676d81bb1468e58ada35d532",
+    "assets": [
+      {
+        "blob": "34feaa47adb12ef78651424aca68748e28cd1b5b",
+        "path": "public/uploads/rules/cli-first-mcp-shared-services/duplicated-inventory-logic.png"
+      },
+      {
+        "blob": "18ad4167f15e17cb676d81bb1468e58ada35d532",
+        "path": "public/uploads/rules/cli-first-mcp-shared-services/rule.mdx"
+      },
+      {
+        "blob": "4f996b21190476742ed5aa10fffa59a42d46cd6b",
+        "path": "public/uploads/rules/cli-first-mcp-shared-services/shared-inventory-core.png"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/cli-first-mcp-shared-services.png",
+    "width": 1280,
+    "height": 4074,
+    "sha256": "0a5a6db5353092c2e95708373d58f2fc96f37aff42d02eacc711012518d7ad34",
+    "capturedAt": "2026-11-06T04:25:19.936Z"
+  },
+  {
+    "pr": 13670,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13670",
+    "uri": "zero-token-watcher-scripts",
+    "title": "Do you let scripts wait instead of spending AI tokens on polling?",
+    "sourceHead": "824368466bb7318ab6bd8385f9996cbb04b9f1ec",
+    "ruleBlob": "1a60f8f9de9332c83d36f67cf345bdca087e7d82",
+    "assets": [
+      {
+        "blob": "1a60f8f9de9332c83d36f67cf345bdca087e7d82",
+        "path": "public/uploads/rules/zero-token-watcher-scripts/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/zero-token-watcher-scripts.png",
+    "width": 1280,
+    "height": 3294,
+    "sha256": "ffe9ca07c5e83fb2527e72c5af4737ddf3c9bba879a9c8780016844dd13e2d1c",
+    "capturedAt": "2026-11-06T04:25:25.264Z"
+  },
+  {
+    "pr": 13671,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13671",
+    "uri": "cli-json-error-envelope-for-agents",
+    "title": "Do your CLIs return JSON errors that agents can act on?",
+    "sourceHead": "aa706ac73b26b4ab25c1f35244d2832b57fbab40",
+    "ruleBlob": "b47aa0c506f1dde6ed3053e744804c7f22ab7250",
+    "assets": [
+      {
+        "blob": "b47aa0c506f1dde6ed3053e744804c7f22ab7250",
+        "path": "public/uploads/rules/cli-json-error-envelope-for-agents/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/cli-json-error-envelope-for-agents.png",
+    "width": 1280,
+    "height": 3891,
+    "sha256": "a60cdebe97a5c199edb987ea5f222bbe20c7ebe7236d66f485f38222ecbcdcf6",
+    "capturedAt": "2026-11-06T04:25:30.552Z"
+  },
+  {
+    "pr": 13672,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13672",
+    "uri": "investigate-dependencies-without-decompiling",
+    "title": "Do you investigate dependencies before decompiling them?",
+    "sourceHead": "eb07b1e417ee38eef4afcc2a061c60b481c05987",
+    "ruleBlob": "821b05f6463a5b7c0757dc0028b510bfb0e309e3",
+    "assets": [
+      {
+        "blob": "821b05f6463a5b7c0757dc0028b510bfb0e309e3",
+        "path": "public/uploads/rules/investigate-dependencies-without-decompiling/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/investigate-dependencies-without-decompiling.png",
+    "width": 1280,
+    "height": 4081,
+    "sha256": "9879edc410f1ed62b77afa9cff9ecc9ecb65c1efad4c5cf04e68246c2db6ec0e",
+    "capturedAt": "2026-11-06T04:25:35.315Z"
+  },
+  {
+    "pr": 13673,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13673",
+    "uri": "verify-branch-against-main-before-ready",
+    "title": "Do you verify your branch against current main before requesting review?",
+    "sourceHead": "9f5e19ced632dbe59aea003015ca454e8af06c00",
+    "ruleBlob": "d4cbb42d3037818344a2c9deef866fc5eec853e8",
+    "assets": [
+      {
+        "blob": "d4cbb42d3037818344a2c9deef866fc5eec853e8",
+        "path": "public/uploads/rules/verify-branch-against-main-before-ready/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/verify-branch-against-main-before-ready.png",
+    "width": 1280,
+    "height": 2780,
+    "sha256": "779cb655bbdb8a98d709f586888db27d6510045a0c590118d7bf20b3c782e889",
+    "capturedAt": "2026-11-06T04:25:40.071Z"
+  },
+  {
+    "pr": 13674,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13674",
+    "uri": "babysit-gate-before-auto-merge",
+    "title": "Do you babysit pull requests before enabling auto-merge?",
+    "sourceHead": "b2f0ff1c5dc449ed15c8a067d85537179aef8688",
+    "ruleBlob": "aa51d59eb2f300e62a7348f63115cf8fde4d32e0",
+    "assets": [
+      {
+        "blob": "a15c8df9359a6409003a3a729cf3cf34213a528f",
+        "path": "public/uploads/rules/babysit-gate-before-auto-merge/auto-merge-before-readiness.png"
+      },
+      {
+        "blob": "fbded63c5e6eafe5a72f8647fe2d669ab7fdf47a",
+        "path": "public/uploads/rules/babysit-gate-before-auto-merge/merge-queue-after-readiness.png"
+      },
+      {
+        "blob": "aa51d59eb2f300e62a7348f63115cf8fde4d32e0",
+        "path": "public/uploads/rules/babysit-gate-before-auto-merge/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/babysit-gate-before-auto-merge.png",
+    "width": 1280,
+    "height": 4448,
+    "sha256": "a585120b799de3d79d6078c0bf432415e7d7e9b37b50a96a8edfa7f71368a505",
+    "capturedAt": "2026-11-06T04:25:45.205Z"
+  },
+  {
+    "pr": 13675,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13675",
+    "uri": "confirm-ai-email-actions-before-execution",
+    "title": "Do you confirm AI email actions before execution?",
+    "sourceHead": "422780537a94f12a6c9ee5fbe545c1b1b88759f7",
+    "ruleBlob": "10aadc78b18ce00076628a72cbc6302c7d90a90c",
+    "assets": [
+      {
+        "blob": "65b2919127e48034e5c292e1bc25824b7e42ca39",
+        "path": "public/uploads/rules/confirm-ai-email-actions-before-execution/email-draft-awaiting-confirmation.png"
+      },
+      {
+        "blob": "1e103799acf7b611ea066b591f2040819acd5e15",
+        "path": "public/uploads/rules/confirm-ai-email-actions-before-execution/email-reply-all-without-confirmation.png"
+      },
+      {
+        "blob": "10aadc78b18ce00076628a72cbc6302c7d90a90c",
+        "path": "public/uploads/rules/confirm-ai-email-actions-before-execution/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/confirm-ai-email-actions-before-execution.png",
+    "width": 1280,
+    "height": 4109,
+    "sha256": "cbf564c596cca7a717cb403d7493a74525ab90777a1d319120dcfa03887d6098",
+    "capturedAt": "2026-11-06T04:25:50.477Z"
+  },
+  {
+    "pr": 13676,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13676",
+    "uri": "fail-closed-pii-scrub-gate-before-llm",
+    "title": "Do you block LLM calls when PII scrubbing fails?",
+    "sourceHead": "defdd1c5b0d2e5f89cc5a4412e5a318c66363338",
+    "ruleBlob": "d7391737f36663245324dbba5af3c38e2c9908d8",
+    "assets": [
+      {
+        "blob": "d7391737f36663245324dbba5af3c38e2c9908d8",
+        "path": "public/uploads/rules/fail-closed-pii-scrub-gate-before-llm/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/fail-closed-pii-scrub-gate-before-llm.png",
+    "width": 1280,
+    "height": 4488,
+    "sha256": "3d32ae08ceec63a55aef91da1eb64f337348dff938d08176e43e1b944ca3bcdf",
+    "capturedAt": "2026-11-06T04:25:55.116Z"
+  },
+  {
+    "pr": 13677,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13677",
+    "uri": "record-ai-run-provenance",
+    "title": "Do you record provenance for AI outputs you keep?",
+    "sourceHead": "4507d496a0ea02c537932b00e67c66492a1d8950",
+    "ruleBlob": "5807e479b2dbc9858bafb67507599ec68f8cf834",
+    "assets": [
+      {
+        "blob": "5807e479b2dbc9858bafb67507599ec68f8cf834",
+        "path": "public/uploads/rules/record-ai-run-provenance/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/record-ai-run-provenance.png",
+    "width": 1280,
+    "height": 3559,
+    "sha256": "292914efc070d76404cd866c2401ea304aeee45eba0eb452ecc555e2b34d3462",
+    "capturedAt": "2026-11-06T04:25:59.550Z"
+  },
+  {
+    "pr": 13678,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13678",
+    "uri": "advisory-ai-annotations-never-source-of-truth",
+    "title": "Do you keep AI annotations separate from authoritative data?",
+    "sourceHead": "a1142543a47ea5e3a99174bc9a9b3fadae7b6e2e",
+    "ruleBlob": "e5f35a81b7ed59f2b3d1237e7f0a66d78e317f67",
+    "assets": [
+      {
+        "blob": "19b6f0657111c1eeb5dedb6d0b85531e93eb81c7",
+        "path": "public/uploads/rules/advisory-ai-annotations-never-source-of-truth/northwind-ai-advisory-suggestion.png"
+      },
+      {
+        "blob": "5901c5f1dde83b875560e88700dfa396bf11bf11",
+        "path": "public/uploads/rules/advisory-ai-annotations-never-source-of-truth/northwind-ai-overwrites-approval.png"
+      },
+      {
+        "blob": "e5f35a81b7ed59f2b3d1237e7f0a66d78e317f67",
+        "path": "public/uploads/rules/advisory-ai-annotations-never-source-of-truth/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/advisory-ai-annotations-never-source-of-truth.png",
+    "width": 1280,
+    "height": 3750,
+    "sha256": "e9e512a4b08fece591638cab79124e35ed43b185ce483b541d18451ac5b56fa8",
+    "capturedAt": "2026-11-06T04:26:04.361Z"
+  },
+  {
+    "pr": 13679,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13679",
+    "uri": "lead-experiment-reports-with-the-verdict",
+    "title": "Do you lead experiment reports with a verdict, scope, limits, and decision?",
+    "sourceHead": "ad38e8095f62e34af37a25eead0ab33d5d54ee51",
+    "ruleBlob": "6e8995e6e17dddf4f2943e13ca080f964429093f",
+    "assets": [
+      {
+        "blob": "6e8995e6e17dddf4f2943e13ca080f964429093f",
+        "path": "public/uploads/rules/lead-experiment-reports-with-the-verdict/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/lead-experiment-reports-with-the-verdict.png",
+    "width": 1280,
+    "height": 2927,
+    "sha256": "eaf8a5f83411751b4e80e615b5055a38e4af159f6e77a99fd9da4d643104da36",
+    "capturedAt": "2026-11-06T04:26:08.759Z"
+  },
+  {
+    "pr": 13680,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13680",
+    "uri": "rag-query-expansion-must-fail-open",
+    "title": "Does your RAG query expansion fail open?",
+    "sourceHead": "a27cf86ee9433ade09bd06e2fdbca887edb6eb43",
+    "ruleBlob": "cc21c1193c91a4d6be4e8e90e1bc6eafda36a664",
+    "assets": [
+      {
+        "blob": "cc21c1193c91a4d6be4e8e90e1bc6eafda36a664",
+        "path": "public/uploads/rules/rag-query-expansion-must-fail-open/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/rag-query-expansion-must-fail-open.png",
+    "width": 1280,
+    "height": 4130,
+    "sha256": "99a8c52754a5cdb4ccb9b9d60039d774c75eea1d2e4ca718674e3153d60b3517",
+    "capturedAt": "2026-11-06T04:26:14.072Z"
+  },
+  {
+    "pr": 13681,
+    "prUrl": "https://github.com/SSWConsulting/SSW.Rules.Content/pull/13681",
+    "uri": "ai-prep-pr-reviews-ahead",
+    "title": "Do you use AI to prepare a pull request review brief?",
+    "sourceHead": "580b63504df2a821e4f3689ac3579648806801a2",
+    "ruleBlob": "a44032fb897c2050d11db836018835c6730fd64a",
+    "assets": [
+      {
+        "blob": "a44032fb897c2050d11db836018835c6730fd64a",
+        "path": "public/uploads/rules/ai-prep-pr-reviews-ahead/rule.mdx"
+      }
+    ],
+    "image": "2026-11-06/afternoon-1412/ai-prep-pr-reviews-ahead.png",
+    "width": 1280,
+    "height": 3377,
+    "sha256": "bf906dc6ac326d3be2d4c3eaa575959eb2ae68705c157e31d7699400d1581169",
+    "capturedAt": "2026-11-06T04:26:19.000Z"
+  }
+]
