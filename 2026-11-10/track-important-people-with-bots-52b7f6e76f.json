@@ -1,0 +1,86 @@
+{
+  "sha": "52b7f6e76f867a254c063625976cce8aef922b1d",
+  "root": "C:/dev/tonight/wt-fix13683",
+  "slug": "track-important-people-with-bots",
+  "title": "Do you use bots to track the people you learn from?",
+  "port": "3034",
+  "required": [
+    "A few SSW people to start with:",
+    "Compare the same three days",
+    "See it with real releases",
+    "For one repository, GitHub's custom watch settings"
+  ],
+  "files": [
+    {
+      "path": "public/uploads/rules/track-important-people-with-bots/change-only-learning-alerts.png",
+      "blob": "2d7406e5997eaec079b175ac0bd0e41543504790"
+    },
+    {
+      "path": "public/uploads/rules/track-important-people-with-bots/noisy-learning-digest.png",
+      "blob": "71456bd97ce80f749906fe4a1aaa403bbe1153a9"
+    },
+    {
+      "path": "public/uploads/rules/track-important-people-with-bots/person-tracker-good.png",
+      "blob": "1e509dbee1189b3ab3393ea5631e9d7a043e3d73"
+    },
+    {
+      "path": "public/uploads/rules/track-important-people-with-bots/rule.mdx",
+      "blob": "2510f21bd215b37a1ee08be75601b4f399c7bb99"
+    }
+  ],
+  "nodeVersion": "v22.17.0",
+  "capturedAt": "2026-11-10T02:36:32.953Z",
+  "httpStatus": 200,
+  "text": "SSW\nRules\n\nSecret ingredients to quality software\n\nServices\nchevronDown\nProducts\nchevronDown\nEvents & Training\nchevronDown\nAbout Us\nchevronDown\nSSW Rules\nchevronDown\nSSW TV\nchevronDown\nLOG IN\n/\nSSW Rules\n/\nBots\n/\nThis rule\nDo you use bots to track the people you learn from?\nLoading last updated info...\nOpen in ChatGPT\n\nYou learn from a handful of experts whose tools, posts and talks shape your work. Checking each person's repositories and blog every morning takes time. A daily digest that repeats old items soon becomes another message to ignore.\n\nUse a bot to follow their public work: record what exists once, then notify only about new releases or publications. Keep the list short so each alert gives you something worth reading or trying. Apps and services change; the pattern stays the same.\n\nChoose the simplest subscription that works\n\nStart with 1–5 people whose work you use, then list their relevant public repositories and feeds. Follow selected work, rather than every action on every account.\n\nFor one repository, GitHub's custom watch settings may be enough. Use an RSS reader for new posts. Build a custom bot when you need one feed across several people's releases, blogs and videos, with consistent filtering and duplicate suppression.\n\nFor a bot, define what counts as a new item before choosing the automation tool:\n\nTools: published releases from selected repositories; decide whether to include prereleases\nWriting: new posts from the author's official RSS feed\nTalks: new videos from selected public channels, using a supported feed or API\n\nSkip stars, forks and routine commits unless they serve a specific learning goal. Use official feeds and APIs, respect their access terms, and leave a source out if you cannot access it through a supported method. Implement the pattern however you like (e.g. a scheduled task in your AI assistant, a small workflow, or a script with persistent storage).\n\nA few SSW people to start with:\n\nCalum Simpson, SSW VP of AI — follow his profile and GitHub for his AI agent work and talks, including AI: It's a Skill Issue.\nMatt Wicks (Wicksy), SSW Solution Architect — read Wicksipedia for CI/CD, DevOps, cloud-native architecture and clean code.\nAdam Cogan, SSW Chief Architect and Microsoft Regional Director — follow his blog for AI, agents and developer productivity.\n\nTrack public work, not private activity. Exclude private repositories, direct messages, calendars and location data. Respect requests not to be monitored. Share alerts only with the people who opted into the feed, and do not impersonate the author or contact them automatically.\n\nFigure: A learning feed follows deliberately published work, with a limited audience\n\nRecord a baseline, then send only new items\n\nThe essential behaviour is the same whichever tool you choose:\n\nBaseline without notifying. On the first successful read of each source, save the IDs of the items it already contains. Repeat this baseline step when adding a source, so an old archive does not arrive as new work.\nCheck at a useful interval. A daily check in your timezone is a reasonable starting point. Prefer supported event subscriptions when available; otherwise follow the provider's polling, conditional-request and rate-limit guidance.\nCompare stable IDs. Save each source and item ID, using the canonical URL when no stable ID is available. Read every page since the last successful check so two releases between checks are both found.\nSend a concise alert. Include the tool or publication, version or title, a short source-backed description, and a direct link for each new item. Use the original title if you cannot verify a summary. If no new items exist, send nothing.\nRecord delivery. Keep pending items until delivery succeeds, then mark them delivered. Use stable item keys to suppress duplicates on retries; check whether your destination supports idempotent delivery before assuming retries cannot repeat a message.\n\nA failed source request is not an empty feed. Preserve its saved state, back off as instructed, and report repeated failures to the bot's owner separately from learning alerts. Store any required credentials in the automation tool's secret store, with only the permissions needed.\n\nCompare the same three days\n\nNorthwind's learning feed follows its fictional Demo Editor app. All releases and features in this example are invented. On Monday it starts with v2.3. Tuesday has no change. On Wednesday, v2.4 adds split panes and v2.5 adds theme packs.\n\n❌ Figure: Bad example - Repeating the baseline and unchanged items makes the two new releases harder to find\n\n✅ Figure: Good example - The bot stays silent until Wednesday, then links both releases with a reason to open each\n\nTest this sequence before relying on the bot: first run sends nothing; an unchanged run sends nothing; two new items produce one alert containing both; rerunning sends nothing. Also test a failed fetch and a failed delivery so neither loses an item or resets the baseline.\n\nSee it with real releases\n\n✅ Figure: Good example - Person tracker (illustration) — name the sources, set a cadence, stay quiet unless something is new, and send one linked line per item\n\nThe releases shown are real: MyTerm v0.67 and MyTerm v0.68 from Gordon Beeming.\n\nKeep the feed useful\n\nReview the watch list periodically and remove sources you no longer read. Check the bot's health separately: silence should mean no new work, not an unnoticed broken integration. Alerts report what was published; read the source and assess it before installing a tool or adopting advice.\n\nThis complements configuring GitHub notifications, which controls GitHub activity notifications. A team notifications channel gives alerts a home, while reviewing project history serves a different need: catching up on team activity. Bring useful discoveries to weekly AI meetings when relevant; the bot supplies candidates and people decide what is worth sharing.\n\nCategories\nBots\nAuthors\nRelated rules\nDo you configure your GitHub Notifications?\nNotifications - Does Your Team Have a Notifications Channel?\nDo you have weekly AI meetings?\nDo you continuously learn?\nNeed help?\n\nSSW Consulting has over 30 years of experience developing awesome software solutions.\n\nBook a free initial meeting\nWe  open source.\nLoving SSW Rules? Star us on GitHub.\nStar\n© 1990-2026 SSW. All rights reserved.\nFEEDBACK / SUGGEST A FEATURE\n|\nTERMS AND CONDITIONS\n|\nThis website is under continuous deployment. Last updated 1 min ago\nPowered by Azure and GitHub",
+  "height": 5358,
+  "width": 1280,
+  "images": [
+    {
+      "src": "https://www.ssw.com.au/images/ssw-logo.svg",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3034/rules/uploads/icon.png",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3034/rules/uploads/rules/track-important-people-with-bots/noisy-learning-digest.png",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3034/rules/uploads/rules/track-important-people-with-bots/change-only-learning-alerts.png",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3034/rules/uploads/rules/track-important-people-with-bots/person-tracker-good.png",
+      "loaded": true
+    }
+  ],
+  "errors": [],
+  "pngBytes": 961406,
+  "pngSha256": "2E2FB99E0A9CA8A776788B14CB82C2E6E4E6D56C260ED3B3CF4D2315BF65FF8B",
+  "visualReview": "Pass: inspected full-page PNG; noisy bad, change-only good, and person-tracker good figures render intact with clean corners; no broken images, raw MDX or private text visible.",
+  "cleanup": {
+    "ports": [
+      3034,
+      4034,
+      9034
+    ],
+    "listenersRemaining": 0,
+    "ownedNodeProcessesRemaining": 0,
+    "worktreeClean": true,
+    "headUnchanged": true,
+    "stoppedProcessIds": [
+      35288,
+      15572,
+      4948,
+      14776,
+      7432,
+      31632,
+      17648,
+      38688,
+      4664,
+      41212
+    ]
+  }
+}
