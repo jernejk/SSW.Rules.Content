@@ -1,0 +1,83 @@
+{
+  "sha": "4908ffb7133e5c9a9e9d17543a9576e3ca83c289",
+  "root": "C:/dev/tonight/wt-stash-persistent",
+  "slug": "persistent-event-driven-agents",
+  "title": "Do you run persistent, event-driven AI agents?",
+  "port": "3033",
+  "required": [
+    "As the work grows, split it into a loop of three roles",
+    "Operations",
+    "Delivery",
+    "Research"
+  ],
+  "files": [
+    {
+      "path": "public/uploads/rules/persistent-event-driven-agents/durable-record-reconciled-pr.png",
+      "blob": "0362bc5be7d4def636cac94953ca6d5ae8f28f65"
+    },
+    {
+      "path": "public/uploads/rules/persistent-event-driven-agents/operations-delivery-research-handoffs.png",
+      "blob": "69efd50cc3a609255a6145356837db1ac5006d1a"
+    },
+    {
+      "path": "public/uploads/rules/persistent-event-driven-agents/rule.mdx",
+      "blob": "f647aae84453e77e67ada0ca04b7fe1941c01472"
+    },
+    {
+      "path": "public/uploads/rules/persistent-event-driven-agents/session-only-duplicate-pr.png",
+      "blob": "8831e6391a810cd093bbff3243beb5863f531c0d"
+    }
+  ],
+  "nodeVersion": "v22.17.0",
+  "capturedAt": "2026-11-10T00:07:11.647Z",
+  "httpStatus": 200,
+  "text": "SSW\nRules\n\nSecret ingredients to quality software\n\nServices\nchevronDown\nProducts\nchevronDown\nEvents & Training\nchevronDown\nAbout Us\nchevronDown\nSSW Rules\nchevronDown\nSSW TV\nchevronDown\nLOG IN\n/\nSSW Rules\n/\nAgentic Engineering (aka Enterprise vibe coding)\n/\nThis rule\nDo you run persistent, event-driven AI agents?\nSee history\nOpen in ChatGPT\n\nYour coding agent fixes a bug when you ask. Meanwhile, a ready backlog item waits for someone to start it, and an interrupted investigation loses its owner. Recurring work depends on someone remembering to type another prompt.\n\nStart recurring agent work from events, and save its owner and progress in a durable record. An event such as a production error or a ready backlog item starts the work without a prompt. After a restart, the agent uses the saved record to check what happened and resume safely.\n\nAs the work grows, split it into a loop of three roles. Operations investigates production issues, Delivery prepares tested pull requests, and Research resolves blocking uncertainty. People set the scope and approve merge and deployment; Operations then monitors the result and feeds new issues back into the loop.\n\nStart with one useful trigger\n\nChoose a repeatable job that needs judgement, such as investigating a new production error or implementing a ready product backlog item (PBI). Use ordinary automation for deterministic steps such as refreshing a dashboard. A one-off question rarely needs a persistent agent.\n\nFor the hosting decision, see when to use AI agents in the cloud. Design durable ownership and recovery across runs, whether the agent is hosted locally or in the cloud.\n\nDefine the event, eligibility criteria, permitted actions, expected output and human owner before enabling the trigger. For example: when a PBI becomes ready, the Delivery agent may prepare one tested pull request (PR), with the assigned developer responsible for reviewing it.\n\nPrefer a webhook when the source provides one. Scheduled polling is reasonable when it does not, or when delayed detection is acceptable. Check for changes before invoking the model: no relevant change means no new agent work. See GitHub's webhook guidance for event filtering and delivery identifiers.\n\nGive each hand-off an owner\n\nStart with one agent. Split roles when the work needs different tools or permissions:\n\nRole\tTrigger\tOutput and next owner\nOperations\tProduction deployment or error\tAn investigated bug with reproduction steps and affected release, assigned to Delivery\nDelivery\tReady PBI or investigated bug\tA tested PR for a human reviewer, or a focused question for Research\nResearch\tUncertainty blocks Delivery's implementation\tFindings and a recommendation returned to Delivery\n\nFigure: Operations feeds Delivery, Research resolves uncertainty, and Delivery implements a tested PR. After human review and release, production feedback returns to Operations\n\nImplementation is a Delivery step, with a tested PR as its output. The PR links the PBI or bug, explains how the change meets its acceptance criteria, and records the tests run and their results. Research is optional: when the requirements and approach are clear, Delivery proceeds directly.\n\nFor example, Operations investigates a Northwind production error after release 2.4 and hands Delivery the reproduction steps, relevant logs and affected release. If the fix depends on an unclear supplier API behaviour, Delivery asks Research that specific question. Research returns its evidence and recommended approach so Delivery can implement and test the fix. Northwind is a fictional example.\n\nAgents do not deploy. A human reviews the PR and authorises merge and release through the team's release process. Operations then monitors production for the original error and any regression; findings become the next investigated bug for Delivery.\n\nEach hand-off includes the work key, acceptance criteria, evidence and next step. Save the new owner and pending hand-off together so a restart cannot lose the transfer. For a Research request, include the blocking question and what decision its answer must support. If the evidence is inconclusive, return the uncertainty to Delivery's human owner instead of guessing or repeating the investigation indefinitely.\n\nPersist ownership and progress\n\nPersistence means that work survives a process restart. Store the queue and checkpoints durably; one chat or process does not need to remain open forever. Microsoft's workflow checkpoint documentation explains storage options and resuming saved work. In-memory storage alone cannot survive a process restart.\n\nUse a database table or durable workflow store to record each item's source, revision, owner, status, evidence, next step and output links. Claim work atomically and use an expiring lease so a crashed worker does not leave it stuck forever. Renew leases during long work and reject writes from workers whose lease has expired.\n\nDesign for duplicate delivery and interrupted actions. Use a stable work key, such as the source system plus PBI ID and ready revision. A delivery ID identifies a notification; several notifications may describe the same work. Serialise writes for that key.\n\nBefore retrying a write, reconcile its outcome or use a destination-supported idempotency key. If the outcome is uncertain, pause for a human instead of writing again. A crash after creating a PR but before saving its URL must not lead to another PR. See how to make handlers safe to retry.\n\nCompare the same event with and without persistence\n\nNorthwind PBI 314, \"Show supplier lead times\", becomes ready at revision 7. In both illustrations, Delivery opens PR 82, then crashes before saving its URL. These synthetic screens use example data.\n\n❌ Figure: Bad example - Lost session state makes the restarted worker repeat the work and open duplicate PR 83\n\n✅ Figure: Good example - Saved ownership and evidence let the replacement worker reconcile PR 82: one work item, one PR\n\nAfter the lease expires, the replacement worker claims the same work key and checks PRs for agent/northwind-pbi-314-r7, including closed PRs. It saves PR 82's URL and resumes its checks. A repeated revision-7 event adds no second work item.\n\nGitHub's list pull requests API supports filtering by head branch and PR state. If the lookup fails or leaves the outcome uncertain, pause instead of creating another PR.\n\nBound the loop and verify recovery\n\nGive each job limits for attempts, elapsed time and spend. Pause exhausted work and notify its human owner. Provide a way to disable the trigger and stop active runs. Filter agent-generated events so updates cannot trigger an endless cycle.\n\nValidate event sources and treat issue text, logs and retrieved content as untrusted data. Give agents only the tools and credentials their roles need. Keep merge, deploy and delete behind human approval, with a control for each action:\n\nMerge - Use branch protection with required reviews. Require a human reviewer and prevent the agent from approving its own work, bypassing protection or pushing directly to the protected branch\nDeploy - Use deployment environment controls with required human reviewers, self-review prevented and approval bypasses disabled\nDelete - Keep deletion credentials in a separate execution path controlled by a human\n\nFeature availability depends on the repository and plan. Keep the agent's identity unable to change these controls. A prompt saying \"ask first\" is insufficient.\n\nBefore unattended use, test in a sandbox: deliver the same event twice, restart the worker before and after a write, and exhaust a retry limit. Confirm that each work key produces one intended result, the next owner can resume from saved evidence, and blocked work reaches a human. Also attempt a prohibited action and verify that permissions reject it. Record events, hand-offs, checks and approvals against the PBI so a reviewer can explain why the change happened.\n\nCategories\nAgentic Engineering (aka Enterprise vibe coding)\nAuthors\nRelated rules\nDo you use Agentic Workflows?\nDo you know when to Chain GitHub Agentic Workflows together?\nDo you use the Transactional Outbox pattern to publish events reliably?\nDo you know when to use AI agents in the cloud?\nNeed help?\n\nSSW Consulting has over 30 years of experience developing awesome software solutions.\n\nBook a free initial meeting\nWe  open source.\nLoving SSW Rules? Star us on GitHub.\n© 1990-2026 SSW. All rights reserved.\nFEEDBACK / SUGGEST A FEATURE\n|\nTERMS AND CONDITIONS\n|\nThis website is under continuous deployment. Last updated 29 min ago\nPowered by Azure and GitHub",
+  "height": 6018,
+  "width": 1280,
+  "images": [
+    {
+      "src": "https://www.ssw.com.au/images/ssw-logo.svg",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3033/rules/uploads/icon.png",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3033/rules/uploads/rules/persistent-event-driven-agents/operations-delivery-research-handoffs.png",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3033/rules/uploads/rules/persistent-event-driven-agents/session-only-duplicate-pr.png",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:3033/rules/uploads/rules/persistent-event-driven-agents/durable-record-reconciled-pr.png",
+      "loaded": true
+    },
+    {
+      "src": "https://raw.githubusercontent.com/SSWConsulting/SSW.People.Profiles/main/Jernej-Kavka/Images/Jernej-Kavka-Profile.jpg",
+      "loaded": true
+    }
+  ],
+  "errors": [],
+  "png": {
+    "bytes": 1169940,
+    "sha256": "c5f5bce2aebe4d1933d9ef9ebdcdc2cfa73c6e25791608454616bdf1be3b2957",
+    "height": 6018,
+    "path": "C:\\dev\\tonight\\shot-tools\\publish\\2026-11-10\\persistent-event-driven-agents-4908ffb713.png",
+    "width": 1280
+  },
+  "visualReview": {
+    "verdict": "Pass",
+    "oddLayout": false,
+    "rawMdx": false,
+    "notes": "Clean layout; new three-role introduction, Operations/Delivery/Research table, hand-off diagram and both recovery illustrations visible.",
+    "brokenImages": false
+  },
+  "finalVerification": {
+    "ownedPortsStopped": true,
+    "headUnchanged": true,
+    "worktreeClean": true
+  }
+}
